@@ -560,18 +560,53 @@ cite{
 
 /* For screens smaller than 768px (adjust as needed) */
 /* Media Queries for Quote Author and Sign Responsiveness */
+/* Media Queries pentru responsivitate (extins) */
+
+/* Pentru ecrane mai mari (stilurile de bază ar trebui să fie aici) */
+cite.quote__author {
+    font-size: 20px;
+    font-weight: 400;
+    color: #818181;
+    padding-top: 23px;
+    display: block;
+    text-align: left;
+    position: static;
+    left: auto;
+    top: auto;
+}
+
+img.quote_sign {
+    width: 47px;
+    height: 50px;
+    display: block;
+    margin: 10px 0 0 0;
+    position: static;
+    left: auto;
+    top: auto;
+    text-align: left;
+}
+
+/* Pentru ecrane mai mici de 992px (tablete) */
+@media (max-width: 992px) {
+    /* Aici poți face ajustări specifice pentru tablete, dacă este necesar */
+    /* De exemplu, poți reduce puțin dimensiunea fontului dacă pare prea mare */
+    cite.quote__author {
+        font-size: 18px;
+    }
+}
+
+/* Pentru ecrane mai mici de 768px (telefoane mai mari) */
 @media (max-width: 768px) {
     .content__quote {
-        /* Poți ajusta alinierea textului citat dacă dorești */
-        text-align: center;
+        text-align: center; /* Sau alinierea dorită */
     }
 
     cite.quote__author {
         font-size: 16px;
-        display: block; /* Asigură afișarea pe linie nouă */
-        text-align: center; /* Centrează textul autorului */
-        padding-top: 10px; /* Adaugă spațiere deasupra autorului */
-        position: static; /* Elimină poziționarea relativă */
+        display: block;
+        text-align: center;
+        padding-top: 10px;
+        position: static;
         left: auto;
         top: auto;
     }
@@ -579,17 +614,23 @@ cite{
     img.quote_sign {
         width: 30px;
         height: 32px;
-        display: block; /* Asigură afișarea pe linie nouă */
-        margin: 10px auto 0 auto; /* Centrează imaginea orizontal și adaugă spațiere deasupra */
-        position: static; /* Elimină poziționarea relativă */
+        display: block;
+        margin: 10px auto 0 auto;
+        position: static;
         left: auto;
         top: auto;
     }
 }
 
+/* Pentru ecrane mai mici de 600px (telefoane mai mici) */
+@media (max-width: 600px) {
+    /* Poți face ajustări suplimentare pentru telefoane mai mici */
+}
+
+/* Pentru ecrane mai mici de 480px (telefoane foarte mici) */
 @media (max-width: 480px) {
     .content__quote {
-        font-size: 18px; /* Ajustează dimensiunea fontului citatului pentru ecrane foarte mici */
+        font-size: 18px;
     }
 
     cite.quote__author {
