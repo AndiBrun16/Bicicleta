@@ -559,37 +559,37 @@ cite{
 /* Media Query for Quote Author and Sign Responsiveness */
 
 /* For screens smaller than 768px (adjust as needed) */
+/* Media Queries for Quote Author and Sign Responsiveness */
 @media (max-width: 768px) {
     .content__quote {
-        font-size: 18px; /* Adjust font size for smaller screens */
-        text-align: left; /* Keep left alignment */
+        /* Poți ajusta alinierea textului citat dacă dorești */
+        text-align: center;
     }
 
     cite.quote__author {
-        font-size: 16px; /* Adjust author font size */
-        text-align: left; /* Keep left alignment */
-        position: static; /* Reset absolute positioning */
-        left: auto; /* Reset left positioning */
-        top: auto; /* Reset top positioning */
-        display: block; /* Ensure it's on its own line */
-        padding-top: 10px; /* Adjust spacing */
+        font-size: 16px;
+        display: block; /* Asigură afișarea pe linie nouă */
+        text-align: center; /* Centrează textul autorului */
+        padding-top: 10px; /* Adaugă spațiere deasupra autorului */
+        position: static; /* Elimină poziționarea relativă */
+        left: auto;
+        top: auto;
     }
 
     img.quote_sign {
-        width: 30px; /* Adjust sign size */
+        width: 30px;
         height: 32px;
-        position: static; /* Reset absolute positioning */
-        left: auto; /* Reset left positioning */
-        top: auto; /* Reset top positioning */
-        display: block; /* Ensure it's on its own line */
-        margin: 10px 0; /* Center horizontally with top/bottom margin */
+        display: block; /* Asigură afișarea pe linie nouă */
+        margin: 10px auto 0 auto; /* Centrează imaginea orizontal și adaugă spațiere deasupra */
+        position: static; /* Elimină poziționarea relativă */
+        left: auto;
+        top: auto;
     }
 }
 
-/* For even smaller screens (optional adjustments) */
 @media (max-width: 480px) {
     .content__quote {
-        font-size: 16px;
+        font-size: 18px; /* Ajustează dimensiunea fontului citatului pentru ecrane foarte mici */
     }
 
     cite.quote__author {
