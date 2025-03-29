@@ -1,4 +1,4 @@
-/* Reset Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,22 +9,22 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #fefeff;
-    line-height: 1.6; /* Improve readability */
+    line-height: 1.6; 
 }
 
 /* HEADER */
 .header {
     display: flex;
     justify-content: center;
-    align-items: center; /* Stretch items to full height */
+    align-items: center; 
     background-color: #000;
-    padding: 0; /* Remove padding to let items stretch */
-    height: 80px; /* Set a fixed height or use min-height as needed */
+    padding: 0; 
+    height: 80px; 
 }
 .header_clearfix {
     display: flex;
     justify-content: center;
-    align-items: center; /* Center items vertically */
+    align-items: center; 
     width: 100%; /* Center the header on the page */
 }
 
@@ -87,11 +87,11 @@ body {
 }
 
 .nav__item {
-    display: flex; /* Set to flex to stretch items */
+    display: flex; 
     justify-content: center; 
-    flex-grow: 1;/* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    padding: 0 15px; /* Horizontal padding */
+    flex-grow: 1;
+    align-items: center; 
+    padding: 0 15px; 
     color: #fff;
     position: relative;
     height: 80px;
@@ -100,15 +100,15 @@ body {
 }
 
 .nav__item:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly darken background on hover */
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 
 .nav__link {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
-    display: block; /* Make link fill the item area */
-    padding: 10px; /* Add vertical padding */
+    display: block; 
+    padding: 10px; 
 }
 
 /* HERO SECTION */
@@ -125,7 +125,7 @@ body {
     text-align: center;
 }
 
-/* Left & Right Shadow Overlay */
+
 .article__hero::before {
     content: "";
     position: absolute;
@@ -137,11 +137,11 @@ body {
     pointer-events: none;
 }
 
-/* Blog Post Title */
+
 .hero__title {
     font-family: 'Playfair Display', serif;
-    font-size: 50px; /* Larger title */
-    font-weight: 900; /* Extra bold */
+    font-size: 50px; 
+    font-weight: 900; 
     color: white;
     text-transform: uppercase;
     text-align: center;
@@ -149,7 +149,7 @@ body {
     margin-bottom: 8px;
 }
 
-/* Horizontal Line */
+
 .hero__title::after {
     content: "";
     display: block;
@@ -160,7 +160,7 @@ body {
     border-radius: 2px;
 }
 
-/* Subtitle Below Title */
+
 .hero__subtitle {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -260,7 +260,7 @@ cite{
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
-    padding-bottom: 10px;/* Change title color */
+    padding-bottom: 10px;
 }
 
 .related__wrapper {
@@ -279,8 +279,8 @@ cite{
     transition: border 0.3s ease-in-out;
 }
 .related__item:hover {
-    box-shadow: 0 0 10px 6px rgba(46, 178, 255, 0.7); /* Smooth blue glow */
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;/* Small blue border on hover */
+    box-shadow: 0 0 10px 6px rgba(46, 178, 255, 0.7); 
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;/
 }
 
 .related__item a{
@@ -296,7 +296,7 @@ cite{
     transition: transform 0.3s ease-in-out;
 }
 .related__item:hover .arrow {
-    transform: scale(1.3); /* Scale down the arrow */
+    transform: scale(1.5); 
 }
 .related__item::after {
     content: "";
@@ -304,7 +304,7 @@ cite{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 80%; /* Adjust the height to control how much shadow covers */
+    height: 80%; 
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 20%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 100%);
     z-index: 1;
 }
@@ -316,7 +316,7 @@ cite{
     display: block;
     position: relative;
     z-index: 0;
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Keep image behind the shadow */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; 
 }
 
 
@@ -324,11 +324,11 @@ cite{
 .item__title {
     position: absolute;
     top: 320px;
-    bottom: 10px; /* Adjust positioning */
+    bottom: 10px; 
     left: 30px;
     right: 10px;
     color: white;
-    font-size: 28px; /* Adjust as needed */
+    font-size: 28px; 
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.2;
@@ -480,55 +480,229 @@ cite{
     color: #818181;
 }
 
-@media (max-width: 1024px) {
-    .hero__title {
-        font-size: 40px;
-    }
-}
+/* Media Queries for Navigation and Footer Responsiveness */
 
-@media (max-width: 768px) {
+/* For screens smaller than 900px (adjust as needed for navigation) */
+/* Media Queries for Header Navigation Responsiveness */
+
+/* For screens smaller than 900px (adjust as needed) */
+@media (max-width: 900px) {
     .header {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
+        flex-direction: column; /* Stack logo and nav on very small screens if needed */
+        padding: 10px; /* Adjust header padding */
+        height: auto; /* Adjust header height */
+    }
+
+    .header_clearfix {
+        flex-direction: column; /* Stack logo and nav */
+        align-items: center; /* Center logo and nav */
+    }
+
+    .header__logo {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add space below logo */
+        margin-top: 10px; /* Add space above logo */
     }
 
     .header__nav {
-        flex-direction: column;
-        align-items: center;
+        width: 100%; /* Take full width */
+        flex-direction: column; /* Stack nav items */
+        align-items: stretch; /* Make nav items full width */
     }
 
     .nav__wrapper {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack links within the wrapper */
+        align-items: stretch; /* Make links take full width */
     }
 
     .nav__item {
-        margin-left: 0;
-        margin-bottom: 10px;
+        width: 100%; /* Full width for each item */
+        margin: 0; /* Remove horizontal margins */
+        border-left: none; /* Remove side borders */
+        border-right: none; /* Remove side borders */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add bottom border */
     }
 
-    .article__hero {
-        height: 80vh;
+    .nav__item:last-child {
+        border-bottom: none; /* Remove bottom border from the last item */
     }
 
-    .hero__title {
-        font-size: 32px;
+    .nav__link {
+        padding: 10px 15px; /* Adjust padding for better touch/click areas */
+        text-align: center; /* Center the link text */
+    }
+
+    .nav__right {
+        display: flex;
+        justify-content: center; /* Center search and button */
+        align-items: center;
+        width: 100%;
+        margin-left: 0; /* Remove left margin */
+        margin-top: 10px; /* Add space above right elements */
+        flex-direction: row; /* Keep search and button in a row initially */
+        gap: 10px; /* Space between search and button */
     }
 }
 
+/* For even smaller screens (optional adjustments) */
 @media (max-width: 480px) {
-    .hero__title {
-        font-size: 26px;
+    .nav__right {
+        flex-direction: column; /* Stack search and button on very small screens */
+        align-items: stretch; /* Make them full width */
     }
 
-    .nav__button {
-        padding: 6px 12px;
-        font-size: 12px;
+    .nav__search {
+        margin-bottom: 10px; /* Add space below search */
+    }
+}
+/* Media Query for Quote Author and Sign Responsiveness */
+
+/* For screens smaller than 768px (adjust as needed) */
+@media (max-width: 768px) {
+    .content__quote {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        text-align: left; /* Keep left alignment */
     }
 
-    .related__wrapper {
-        flex-direction: column;
-        align-items: center;
+    cite.quote__author {
+        font-size: 16px; /* Adjust author font size */
+        text-align: left; /* Keep left alignment */
+        position: static; /* Reset absolute positioning */
+        left: auto; /* Reset left positioning */
+        top: auto; /* Reset top positioning */
+        display: block; /* Ensure it's on its own line */
+        padding-top: 10px; /* Adjust spacing */
+    }
+
+    img.quote_sign {
+        width: 30px; /* Adjust sign size */
+        height: 32px;
+        position: static; /* Reset absolute positioning */
+        left: auto; /* Reset left positioning */
+        top: auto; /* Reset top positioning */
+        display: block; /* Ensure it's on its own line */
+        margin: 10px 0; /* Center horizontally with top/bottom margin */
+    }
+}
+
+/* For even smaller screens (optional adjustments) */
+@media (max-width: 480px) {
+    .content__quote {
+        font-size: 16px;
+    }
+
+    cite.quote__author {
+        font-size: 14px;
+    }
+
+    img.quote_sign {
+        width: 25px;
+        height: 27px;
+    }
+}
+/* Media Query for Social Buttons and Membri Responsiveness */
+
+/* For screens smaller than 600px (adjust as needed) */
+@media (max-width: 600px) {
+    .social > div { /* Targeting the container of butoane and membri */
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center children horizontally */
+        width: 100%;
+    }
+
+    .butoane {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: stretch; /* Make buttons full width */
+        width: 100%;
+        margin-top: 20px; /* Adjust top margin */
+        gap: 8px; /* Adjust vertical gap between buttons */
+    }
+
+    .butjos {
+        width: 100%; /* Make buttons full width */
+        font-size: 16px; /* Adjust font size */
+        padding: 10px; /* Adjust padding */
+        justify-content: center; /* Center text and icon */
+    }
+
+    .butjos img {
+        margin-right: 5px; /* Adjust icon spacing */
+    }
+
+    .butoane > span { /* Targeting the likes count span */
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .membri {
+        justify-content: center; /* Center member images */
+        margin-top: 15px;
+        flex-wrap: wrap; /* Allow wrapping if many images */
+    }
+
+    .membri img {
+        width: 50px; /* Adjust image size */
+        height: 50px;
+        margin: 5px;
+        margin-bottom: 15px; /* Adjust bottom margin */
+    }
+}
+
+/* For slightly larger screens (optional adjustments) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .butoane {
+        justify-content: center; /* Center buttons horizontally */
+        flex-wrap: wrap; /* Allow buttons to wrap if needed */
+    }
+
+    .butjos {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    .membri {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .membri img {
+        width: 55px;
+        height: 55px;
+        margin: 8px;
+    }
+}
+
+/* For screens smaller than 600px (adjust as needed for footer) */
+@media (max-width: 600px) {
+    .footer__menu .menu__wrapper {
+        flex-direction: column; /* Stack footer menu items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 15px; /* Adjust gap for vertical stacking */
+    }
+
+    .menu__wrapper {
+        border-bottom: none; /* Remove bottom border between stacked items */
+        padding-bottom: 10px;
+    }
+
+    .menu__item {
+        width: 100%; /* Make each item take full width */
+        text-align: center; /* Center text in stacked items */
+        padding: 5px 0; /* Add some vertical padding */
+        border-bottom: 1px solid #313131; /* Add separator between items */
+    }
+
+    .menu__item:last-child {
+        border-bottom: none; /* Remove bottom border from the last item */
+    }
+
+    .footer__logo img {
+        max-width: 120px; /* Adjust logo size for smaller screens */
+    }
+
+    .footer__copyright {
+        font-size: 10px; /* Adjust copyright size */
     }
 }
